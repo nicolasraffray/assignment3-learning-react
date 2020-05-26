@@ -14,7 +14,6 @@ class App extends Component {
           <Link to="/users"> Users</Link>
           <Switch>
             <Route path="/users" component={Users}></Route>
-            <Route path="/courses/:id" component={Course}></Route>
             <Route path="/courses" component={Courses}></Route>
           </Switch>
         </div>

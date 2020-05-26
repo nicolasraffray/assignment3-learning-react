@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
-import Users from "../Users/Users";
-import { Link } from "react-router-dom";
-
+import { Route, Link } from "react-router-dom";
+import Course from "../Course/Course";
 import "./Courses.css";
 
 class Courses extends Component {
@@ -34,6 +32,7 @@ class Courses extends Component {
             );
           })}
         </section>
+        <Route path="/courses/:id" component={Course}></Route>
       </div>
     );
   }
