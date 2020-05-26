@@ -2,24 +2,22 @@ import React, { Component } from "react";
 import Courses from "./containers/Courses/Courses";
 import Users from "./containers/Users/Users";
 import Course from "./containers/Course/Course";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
-          <div>
-            <Link to="/courses">Courses </Link>
-            <br></br>
-            <Link to="/users"> Users</Link>
-            <Switch>
-              <Route path="/users" exact render={() => <Users />}></Route>
-              <Route path="/courses" render={() => <Courses />}></Route>
-              <Route path="/:id" exact render={() => <Course />} />
-            </Switch>
-          </div>
-        </BrowserRouter>
+        <div>
+          <Link to="/courses">Courses </Link>
+          <br></br>
+          <Link to="/users"> Users</Link>
+          <Switch>
+            <Route path="/users" exact render={() => <Users />}></Route>
+            <Route path="/courses" render={() => <Courses />}></Route>
+            <Route path="/:id" exact render={() => <Course />} />
+          </Switch>
+        </div>
         <ol style={{ textAlign: "left" }}>
           <li>
             ! DONE ! Add Routes to load "Users" and "Courses" on different pages
@@ -30,9 +28,9 @@ class App extends Component {
             "Users", one leading to "Courses"
           </li>
           <li>
-            Make the courses in "Courses" clickable by adding a link and load
-            the "Course" component in the place of "Courses" (without passing
-            any data for now)
+            ! DONE ! Make the courses in "Courses" clickable by adding a link
+            and load the "Course" component in the place of "Courses" (without
+            passing any data for now)
           </li>
           <li>Pass the course ID to the "Course" page and output it there</li>
           <li>
