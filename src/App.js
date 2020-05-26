@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Courses from "./containers/Courses/Courses";
 import Users from "./containers/Users/Users";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import Course from "./containers/Course/Course";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -12,9 +13,11 @@ class App extends Component {
             <Link to="/courses">Courses </Link>
             <br></br>
             <Link to="/users"> Users</Link>
-
-            <Route path="/courses" render={() => <Courses />}></Route>
-            <Route path="/users" render={() => <Users />}></Route>
+            <Switch>
+              <Route path="/users" exact render={() => <Users />}></Route>
+              <Route path="/courses" render={() => <Courses />}></Route>
+              <Route path="/:id" exact render={() => <Course />} />
+            </Switch>
           </div>
         </BrowserRouter>
         <ol style={{ textAlign: "left" }}>
@@ -23,8 +26,8 @@ class App extends Component {
             (by entering a URL, without Links)
           </li>
           <li>
-            Add a simple navigation with two links => One leading to "Users",
-            one leading to "Courses"
+            ! DONE ! Add a simple navigation with two links => One leading to
+            "Users", one leading to "Courses"
           </li>
           <li>
             Make the courses in "Courses" clickable by adding a link and load

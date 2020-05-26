@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import Users from "../Users/Users";
+import { Link } from "react-router-dom";
 
 import "./Courses.css";
 
@@ -14,6 +15,7 @@ class Courses extends Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <h1>Amazing Udemy Courses</h1>
@@ -22,6 +24,7 @@ class Courses extends Component {
             return (
               <article className="Course" key={course.id}>
                 {course.title}
+                <Link to={"" + course.id}> Go to Course</Link>
               </article>
             );
           })}
