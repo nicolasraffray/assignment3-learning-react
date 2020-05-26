@@ -14,7 +14,7 @@ class App extends Component {
           <Link to="/users"> Users</Link>
           <Switch>
             <Route path="/users" component={Users}></Route>
-            <Route path="/courses/course" component={Course}></Route>
+            <Route path="/courses/:id" component={Course}></Route>
             <Route path="/courses" component={Courses}></Route>
           </Switch>
         </div>
@@ -32,7 +32,9 @@ class App extends Component {
             and load the "Course" component in the place of "Courses" (without
             passing any data for now)
           </li>
-          <li>Pass the course ID to the "Course" page and output it there</li>
+          <li>
+            ! DONE ! Pass the course ID to the "Course" page and output it there
+          </li>
           <li>
             Pass the course title to the "Course" page - pass it as a param or
             score bonus points by passing it as query params (you need to
