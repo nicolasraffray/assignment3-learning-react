@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 import Courses from "./containers/Courses/Courses";
 import Users from "./containers/Users/Users";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <BrowserRouter>
-          <Route path="/courses" render={() => <Courses />} />
-        </BrowserRouter>
+          <div>
+            <Link to="/courses">Courses </Link>
+            <br></br>
+            <Link to="/users"> Users</Link>
 
-        <BrowserRouter>
-          <Route path="/users" render={() => <Users />} />
+            <Route path="/courses" render={() => <Courses />}></Route>
+            <Route path="/users" render={() => <Users />}></Route>
+          </div>
         </BrowserRouter>
         <ol style={{ textAlign: "left" }}>
           <li>
