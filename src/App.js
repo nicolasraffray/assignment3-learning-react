@@ -13,9 +13,9 @@ class App extends Component {
           <br></br>
           <Link to="/users"> Users</Link>
           <Switch>
-            <Route path="/users" exact render={() => <Users />}></Route>
-            <Route path="/courses" render={() => <Courses />}></Route>
-            <Route path="/:id" exact render={() => <Course />} />
+            <Route path="/users" component={Users}></Route>
+            <Route path="/courses/course" component={Course}></Route>
+            <Route path="/courses" component={Courses}></Route>
           </Switch>
         </div>
         <ol style={{ textAlign: "left" }}>
