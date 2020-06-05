@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Courses from "./containers/Courses/Courses";
 import Users from "./containers/Users/Users";
 import Course from "./containers/Course/Course";
+import NotFound from "./containers/404/404";
 import { Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
           <Switch>
             <Route path="/users" component={Users}></Route>
             <Route path="/courses" component={Courses}></Route>
+            <Route component={NotFound} />
           </Switch>
         </div>
         <ol style={{ textAlign: "left" }}>
